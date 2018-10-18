@@ -42,11 +42,15 @@ nav {
 header {
     position: relative;
     z-index: 2;
+    color: white;
+    font-weight: 400;
 }
 
 main {
     border-top: 1px solid #E4F6E2;
-    background-color: #D3E5D1;
+    background-image: url("IMAG0714.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     display: block;
     height: calc(100vh - 75px);
