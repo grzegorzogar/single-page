@@ -23,7 +23,9 @@ body:after {
     top: 0;
     left: 0;
 }
+#hero-container {
 
+}
 #container {
     height: 100%;
     margin: 15px auto 0;
@@ -36,7 +38,7 @@ nav {
     width: 100%;
     position: relative;
     height: 75px;
-    background-color: #D3E5D1;
+    border-bottom: 1px dotted #000000;
 }
 
 header {
@@ -53,7 +55,7 @@ main {
     background-size: cover;
     width: 100%;
     display: block;
-    height: calc(100vh - 75px);
+    height: 100vh;
     text-align: center;
     padding: 10px;
     position: relative;
@@ -135,6 +137,7 @@ footer div p a {
 
 nav div.hamburger-menu {
     cursor: pointer;
+    color: white;
 }
 
 nav #logo {
@@ -180,6 +183,8 @@ div.arrow {
     color: black;
     overflow: hidden;
     transition: 500ms ease-in-out;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 10px white;
 }
 
 .icon-angle-double-down {
