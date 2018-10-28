@@ -4,36 +4,39 @@
     <meta charset="UTF-8">
     <title>Mała responsywna stronka</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/fontello.css" type="text/css">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="images/fontello-images/css/fontello.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-    <div id="logo">
-        <span id="logo-text">My logo</span>
-    </div>
-    <div class="hamburger-menu">
-        <span class="icon-menu"></span>
-    </div>
-</nav>
 
 <main>
-
-    <header>
-        <h1>Hi there!</h1>
-        <h3><span>Welcome on my new website.</span> I'll show you some of my projects.</h3>
-    </header>
-
-    <img class="boy-image" src="image.png" name="main-image" alt="Chlopiec">
-
-    <a href="#section">
+    <nav>
+        <div id="logo">
+            <span id="logo-text">My logo</span>
+        </div>
+        <div class="hamburger-menu mobile-only">
+            <span class="icon-menu"></span>
+        </div>
+        <div class="standard-menu desktop-size">
+            <ol>
+                <li>Projects</li>
+                <li>About me</li>
+                <li>Contact</li>
+            </ol>
+        </div>
+    </nav>
+    <div id="hero-container">
+        <header>
+            <h1>Hi there!</h1>
+            <h3><span>Welcome on my new website.</span> I'll show you some of my projects.</h3>
+        </header>
+        <img class="boy-image" src="images/image.png" name="main-image" alt="Chlopiec">
         <div class="arrow">
             <span class="icon-angle-double-down"></span>
         </div>
-    </a>
-
+    </div>
 </main>
 
 <div id="container">
@@ -113,5 +116,10 @@
         </div>
     </footer>
 </div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

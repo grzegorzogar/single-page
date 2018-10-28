@@ -13,7 +13,7 @@ body {
 
 body:after {
     position: absolute;
-    background: url("main-background-image.jpg") no-repeat fixed 100%;
+    background: url("../images/background.jpg") no-repeat fixed 100%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -23,7 +23,9 @@ body:after {
     top: 0;
     left: 0;
 }
+#hero-container {
 
+}
 #container {
     height: 100%;
     margin: 15px auto 0;
@@ -36,24 +38,29 @@ nav {
     width: 100%;
     position: relative;
     height: 75px;
-    background-color: #D3E5D1;
+    border-bottom: 1px dotted #000000;
 }
 
 header {
     position: relative;
     z-index: 2;
+    color: white;
+    font-weight: 400;
 }
 
 main {
-    border-top: 1px solid #E4F6E2;
-    background-color: #D3E5D1;
+    background-image: url("../images/IMAG0714.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     display: block;
-    height: calc(100vh - 75px);
+    height: 100vh;
     text-align: center;
     padding: 10px;
     position: relative;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 main img.boy-image {
@@ -131,6 +138,7 @@ footer div p a {
 
 nav div.hamburger-menu {
     cursor: pointer;
+    color: white;
 }
 
 nav #logo {
@@ -159,7 +167,29 @@ nav div.hamburger-menu span {
     transform: translate(-3%, -50%);
 }
 
+nav .standard-menu {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translate(-3%, -50%);
+}
+
+nav .standard-menu ol{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.standard-menu li {
+    display: inline-block;
+    color: white;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    cursor: pointer;
+
+}
+
 div.arrow {
+    visibility: hidden;
     position: absolute;
     bottom: 5%;
     left: 50%;
@@ -176,6 +206,11 @@ div.arrow {
     color: black;
     overflow: hidden;
     transition: 500ms ease-in-out;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 10px white;
+    animation:  fadein 6s;
+    animation-fill-mode: forwards;
+
 }
 
 .icon-angle-double-down {
@@ -270,7 +305,7 @@ div.arrow:hover {
 
 #section-3 {
     min-height: 50vh;
-    background-image: url("background-image.jpg");
+    background-image: url("../images/background-image.jpg");
     background-size: cover;
     background-position: 100%;
     border-top-left-radius: 10px;
@@ -353,6 +388,10 @@ div.arrow:hover {
     #section-1 .flex-item:hover {
         font-size: 64px;
     }
+
+    .desktop-size {
+        display: none;
+    }
 }
 
 @media (max-height: 420px) {
@@ -367,6 +406,20 @@ div.arrow:hover {
     }
 }
 
+@media (min-width: 481px){
+    .mobile-only {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){
+    header h1 {
+        font-size: 3rem;
+    }
+    header h3 {
+        font-size: 2rem;
+    }
+}
 @media only screen and (max-width: 740px) and (orientation: landscape) {
     h1, h3 {
         width: 70%;
@@ -405,4 +458,43 @@ div.arrow:hover {
     100% {
         transform: translateY(40px)
     }
+}
+
+@keyframes arrowdiv {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadein {
+    0% {
+        visibility: hidden;
+    }
+    30% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: visible;
+        opacity: 0.3;
+    }
+    60% {
+        opacity: 0.45;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.75;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+
 }
